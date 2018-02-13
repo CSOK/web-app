@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { WhoComponent } from './who/who.component';
 import { WhatComponent } from './what/what.component';
 import { StoriesComponent } from './stories/stories.component';
+import { PicturesComponent } from './pictures/pictures.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { StoriesComponent } from './stories/stories.component';
     HomeComponent,
     WhoComponent,
     WhatComponent,
-    StoriesComponent
+    StoriesComponent,
+    PicturesComponent
   ],
   imports: [
     BrowserModule
