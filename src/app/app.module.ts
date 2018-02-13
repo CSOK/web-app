@@ -8,6 +8,7 @@ import { WhoComponent } from './who/who.component';
 import { WhatComponent } from './what/what.component';
 import { StoriesComponent } from './stories/stories.component';
 import { PicturesComponent } from './pictures/pictures.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { PicturesComponent } from './pictures/pictures.component';
     WhoComponent,
     WhatComponent,
     StoriesComponent,
-    PicturesComponent
+    PicturesComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule
