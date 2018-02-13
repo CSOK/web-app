@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
@@ -11,6 +12,14 @@ import { PicturesComponent } from './pictures/pictures.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'who', component: WhoComponent },
+  { path: 'what', component: WhatComponent },
+  { path: 'stories', component: StoriesComponent },
+  { path: 'pictures', component: PicturesComponent },
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,10 +28,11 @@ import { NavbarComponent } from './navbar/navbar.component';
     WhatComponent,
     StoriesComponent,
     PicturesComponent,
-    NavbarComponent
+    NavbarComponent,
   ],
   imports: [
-    BrowserModule
+    RouterModule.forRoot(appRoutes),
+    BrowserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
