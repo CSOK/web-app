@@ -55,11 +55,9 @@
                    Our activites include:
                 </p>
                 <ul>
-                    <li>Tech-talks</li>
-                    <li>Meet Ups</li>
-                    <li>Trainings</li>
-                    <li>Hack-a-thons</li>
-                    <li>Social activities</li>
+                    <li *ngFor="let activity of activities">
+                        {{ activity }}
+                    </li>
                 </ul>
                 <p>
                     Our events include 

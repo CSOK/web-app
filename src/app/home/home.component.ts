@@ -9,6 +9,14 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
+  activities: string[] = [
+    'Tech-talks',
+    'Meetups',
+    'Trainings',
+    'Hack-a-thons',
+    'Social Activities'
+  ];
+
   ngOnInit() {
   }
 
