@@ -16,6 +16,7 @@ import { WhatComponent } from './what/what.component';
 import { StoriesComponent } from './stories/stories.component';
 import { PicturesComponent } from './pictures/pictures.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     StoriesComponent,
     PicturesComponent,
     NavbarComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
