@@ -54,9 +54,11 @@
                 <p>
                    Our activites include:
                 </p>
-                <ul>
+                <ul class="fa-ul">
                     <li *ngFor="let activity of activities">
-                        {{ activity }}
+                        <span class="fa-li">
+                            <i class="fa fa-cog fa-spin"></i>
+                        </span>{{ activity }}
                     </li>
                 </ul>
                 <p>
@@ -190,3 +192,11 @@
             </div> 
         </div>
     </section><!-- //Pictures -->
+
+    <section id="sponsors">
+        <div class="container-fluid">
+            <div class="col-xs-4 col-sm-4 col-md-2">
+                
+            </div>
+        </div>
+    </section>

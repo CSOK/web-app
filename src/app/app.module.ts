@@ -5,6 +5,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+//
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
 // Custom modules
 import { AppRoutes } from './app.routes';
 
@@ -36,6 +39,7 @@ import { FooterComponent } from './footer/footer.component';
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(AppRoutes),
+    AngularFontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
