@@ -1,34 +1,38 @@
-<footer id="my-footer">
-  <div class="container-fluid">
+<footer id="my-footer" class="bg-dark">
+  <div class="container">
     <div class="row">
       <div class="col-xs-6 col-sm-6 col-md-3">
-        <img src="assets/img/csk-logo.png">
+        <a routerLink=""><img src="assets/img/csk-logo.png"></a>
       </div>
       <div class="col-xs-6 col-sm-6 col-md-3">
-        <h3>INFORMATION</h3>
-        <ul>
-          <li>Who We Are</li>
-          <li>What We Do</li>
-          <li>Pictures</li>
-          <li>Stories</li>
+        <h4>INFORMATION</h4>
+        <ul footer-info>
+            <li><a routerLink="/who">Who We Are</a></li>
+            <li><a routerLink="/what">What We Do</a></li>
+            <li><a routerLink="/pictures">Pictures</a></li>
+            <li><a routerLink="/stories">Stories</a></li>
+        </ul>
+    </div>
+      <div class="col-xs-6 col-sm-6 col-md-3">
+        <h4>POLICY INFO</h4>
+        <ul footer-info>
+          <li><a routerLink="/faq">FAQ</a></li>
+          <li><a routerLink="/privacy-policy">Privacy Policy</a></li>
+          <li><a routerLink="/terms-of-use">Terms of Use</a></li>
         </ul>
       </div>
       <div class="col-xs-6 col-sm-6 col-md-3">
-        <h3>POLICY INFO</h3>
-        <ul>
-          <li>FAQ</li>
-          <li>Privacy Policy</li>
-          <li>Terms of Use</li>
-        </ul>
-      </div>
-      <div class="col-xs-6 col-sm-6 col-md-3">
-        <h3>CONNECT</h3>
+        <h4>CONNECT</h4>
         <ul class="social">
-          <li><a href="" title="Twitter"><i class="fa fa-twitter fa-2x"></i></a></li>
-          <li><a href="https://www.facebook.com/ComputerSocietyOfKimathi/" title="Facebook"><i class="fa fa-facebook fa-2x"></i></a></li>
-          <li><a href="#" title="Medium+"><i class="fa fa-medium fa-2x"></i></a></li>
+          <li><a href="" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://www.facebook.com/ComputerSocietyOfKimathi/" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#" title="Medium+"><i class="fa fa-medium"></i></a></li>
         </ul>
       </div>
     </div>
+
+    <hr>
+
+    <p class="text-center footer-extra"><a routerLink="/" title="">Computer Society of Kimathi | &copy; {{ CurrentYear }}</a></p>
   </div>
 </footer>
