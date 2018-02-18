@@ -12,4 +12,9 @@ export class WhoComponent implements OnInit {
   ngOnInit() {
   }
 
+  private stats = {
+    "members" : 300,
+    "events" : 99,
+    "sponsors" : 21
+  };
 }
