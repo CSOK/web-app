@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 
-#my-footer {
-    background-color: #000000;
+.bg-dark {
+    background-color: #18191a !important; 
 }

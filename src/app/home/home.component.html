@@ -63,16 +63,16 @@
                 </ul>
                 <p>
                     Our events include 
-                    <a href="#" title="Google Developer Group">GDG DevFest</a> ,
-                    <a href="#" title="Major League Hacking">MLH</a> ,
-                    <a href="#" title="">Intel at DeKUT</a> ,
-                    <a href="#" title="">DeHUB Hack Kenya</a> among others. You can view all our events <a href="#">here</a>.
+                    <a routerLink="" title="Google Developer Group">GDG DevFest</a> ,
+                    <a routerLink="" title="Major League Hacking">MLH</a> ,
+                    <a routerLink="" title="">Intel at DeKUT</a> ,
+                    <a routerLink="" title="">DeHUB Hack Kenya</a> among others. You can view all our events <a href="#">here</a>.
                 </p>
                 <p>
                     Our membership is open for all. What are you waiting for? Hit the button below and join the community.
                 </p>
 
-                <button type="button" class="btn btn-outline-secondary">Read More</button>
+                <button routerLink="/who" type="button" class="btn btn-outline-secondary">Read More</button>
                 <a href="#" class="btn btn-secondary" role="button" aria-pressed="true"> Join Us </a>
             </div>
             <div class="col-sm-12 col-md-6">
@@ -85,23 +85,29 @@
 <section id="what">
         <div class="container">
             <h1 class="text-center">WHAT WE DO</h1>
-            <!-- Three images -->
+            <!-- Event Images -->
             <div class="row">
-                <div class="mx-auto">
-                    <img class="rounded " src="./assets/img/what-1.jpg" alt="" width="240" height="240">
-                    <img class="rounded " src="./assets/img/what-2.jpg" alt="" width="240" height="240">
-                    <img class="rounded " src="./assets/img/what-3.jpg" alt="" width="240" height="240">
+                <div class="col col-xs-6 col-sm-6 col-md-4">
+                    <img class="rounded" src="./assets/img/what-1.jpg" alt="Bootcamp" width="100%">
+                </div>
+                <div class="col col-xs-6 col-sm-6 col-md-4">
+                    <img class="rounded" src="./assets/img/what-2.jpg" alt="Bootcamp" width="100%">
+                </div>
+                <div class="col col-xs-6 col-sm-6 col-md-4">
+                    <img class="rounded" src="./assets/img/what-3.jpg" alt="Bootcamp" width="100%">
+                </div>
+                <div class="col col-xs-6 col-sm-6 col-md-4">
+                    <img class="rounded" src="./assets/img/what-4.jpg" alt="Bootcamp" width="100%">
+                </div>
+                <div class="col col-xs-6 col-sm-6 col-md-4">
+                    <img class="rounded" src="./assets/img/what-5.jpg" alt="Bootcamp" width="100%">
+                </div>
+                <div class="col col-xs-6 col-sm-6 col-md-4">
+                    <img class="rounded" src="./assets/img/what-6.jpg" alt="Bootcamp" width="100%">
                 </div>
             </div>
-            <div class="row">
-                    <div class="mx-auto">
-                        <img class="rounded " src="./assets/img/what-4.jpg" alt="" width="240" height="240">
-                        <img class="rounded " src="./assets/img/what-5.jpg" alt="" width="240" height="240">
-                        <img class="rounded " src="./assets/img/what-6.jpg" alt="" width="240" height="240">
-                    </div>
-                </div>
 
-            <a href="#" class="btn btn-primary float-right" role="button" aria-pressed="true">See All</a>
+            <a routerLink="" class="btn btn-primary float-right" role="button" aria-pressed="true">See All<i class="fa fa-arrow"></i></a>
         </div>
     </section>
 
@@ -109,64 +115,17 @@
         <div class="container">
             <h1 class="text-center">STORIES</h1>
             <div class="row">
-                <div class="col col-sm-6 col-md-3">
+                <div class="col-xs-6 col-sm-6 col-md-3" *ngFor="let story of stories">
                     <div class="stories-img">
-                        <img src="assets/img/stories-1.jpg" alt="stories Image" class="rounded" width="100%">
+                        <img [src]="story.thumbnail" alt="stories Image" class="rounded" width="100%">
                     </div>
                     <div class="stories-text">
-                        <h6>Marvin Ngesa | 25 October</h6>
-                        <h4>Lorem Ipsum Dor</h4>
+                        <h6>{{ story.author }} | {{ story.dateWritten }}</h6>
+                        <h4> {{ story.title }} </h4>
                         <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            when an unknown ...
+                           {{ story.content}}
                         </p>
-                        <a href="#" class="btn btn-outline-secondary">Read More</a>
-                    </div>
-                </div>
-                <div class="col col-sm-6 col-md-3">
-                    <div class="stories-img">
-                        <img src="assets/img/stories-1.jpg" alt="stories Image" class="rounded" width="100%">
-                    </div>
-                    <div class="stories-text">
-                        <h6>Marvin Ngesa | 25 October</h6>
-                        <h4>Lorem Ipsum Dor</h4>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            when an unknown ...
-                        </p>
-                        <a href="#" class="btn btn-outline-secondary">Read More</a>
-                    </div>
-                </div>
-                <div class="col col-sm-6 col-md-3">
-                    <div class="stories-img">
-                        <img src="assets/img/stories-1.jpg" alt="stories Image" class="rounded" width="100%">
-                    </div>
-                    <div class="stories-text">
-                        <h6>Marvin Ngesa | 25 October</h6>
-                        <h4>Lorem Ipsum Dor</h4>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            when an unknown ...
-                        </p>
-                        <a href="#" class="btn btn-outline-secondary">Read More</a>
-                    </div>
-                </div>
-                <div class="col col-sm-6 col-md-3">
-                    <div class="stories-img">
-                        <img src="assets/img/stories-1.jpg" alt="stories Image" class="rounded" width="100%">
-                    </div>
-                    <div class="stories-text">
-                        <h6>Marvin Ngesa | 25 October</h6>
-                        <h4>Lorem Ipsum Dor</h4>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            when an unknown ...
-                        </p>
-                        <a href="#" class="btn btn-outline-secondary">Read More</a>
+                        <a routerLink="stories/id" class="btn btn-outline-secondary float-right">Read More</a>
                     </div>
                 </div>
             </div>
@@ -177,26 +136,33 @@
         <div class="container">
             <h1>Pictures</h1>
             <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <img src="assets/img/pictures-1.jpg" class="rounded" width="100%">
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <img src="assets/img/pictures-2.jpg" class="rounded" width="100%">
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <img src="assets/img/pictures-3.jpg" class="rounded" width="100%">
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <img src="assets/img/pictures-4.jpg" class="rounded" width="100%">
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3" *ngFor="let image of images">
+                    <img [src]="image" class="rounded" width="100%">
                 </div>
             </div> 
         </div>
     </section><!-- //Pictures -->
 
     <section id="sponsors">
-        <div class="container-fluid">
-            <div class="col-xs-4 col-sm-4 col-md-2">
-                
+        <div class="container">
+            <h2>Sponsors and Organizers</h2>
+
+            <div class="row">
+                <div class="col">
+                    <img src="./assets/img/sponsors/1.jpg" alt="Organizers" width="100%">
+                </div>
+                <div class="col">
+                    <img src="./assets/img/sponsors/2.jpg" alt="Organizers" width="100%">
+                </div>
+                <div class="col">
+                    <img src="./assets/img/sponsors/3.jpg" alt="Organizers" width="100%">
+                </div>
+                <div class="col">
+                    <img src="./assets/img/sponsors/4.jpg" alt="Organizers" width="100%">
+                </div>
+                <div class="col">
+                    <img src="./assets/img/sponsors/5.jpg" alt="Organizers" width="100%">
+                </div>
             </div>
         </div>
     </section>

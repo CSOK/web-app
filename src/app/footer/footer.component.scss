@@ -1,18 +1,45 @@
 footer{
     padding: 30px;
-}
-.social{
-    ul{
-        margin: 0;
-
+    ul {
+        list-style-type: none;
         padding: 0;
+        margin: 0;
     }
     li {
-        float: left;
         list-style-type: none;
+    }
+    a{
+        color: #27609d;
+    }
+    a:hover {
+        text-decoration: none;
+    }
+}
+
+h4 {
+    color: #a1a2a2;
+}
+
+hr {
+    background-color: #555757;
+}
+
+.social{
+    li {
+        float: left;
     }
     a {
         display: block;
         padding: 8px;
     }
+}
+ul .footer-info{
+    list-style-type: none;
+    li {
+        list-style-type: none;        
+    }
+}
+
+.footer-extra {
+    font-size: 0.7em;
 }
