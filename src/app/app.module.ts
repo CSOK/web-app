@@ -20,6 +20,8 @@ import { StoriesComponent } from './stories/stories.component';
 import { PicturesComponent } from './pictures/pictures.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { HistoryComponent } from './who/history/history.component';
+import { LeadersComponent } from './who/leaders/leaders.component';
 
 
 @NgModule({
@@ -32,6 +34,8 @@ import { FooterComponent } from './footer/footer.component';
     PicturesComponent,
     NavbarComponent,
     FooterComponent,
+    HistoryComponent,
+    LeadersComponent,
   ],
   imports: [
     BrowserModule,
