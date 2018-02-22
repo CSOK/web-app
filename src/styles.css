@@ -14,12 +14,12 @@ h1, h2, h3, h4, h5, h6{
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 20px 0;
 }
-.bg-dark {
-    background-color: #18191a !important; 
-}
+
+  a:hover {
+    text-decoration: none;
+  }
 
 /* Buttons */
-
 .btn-secondary {
     background-color: #bd212f;
     border-color: #bd212f;
@@ -49,9 +49,6 @@ h1, h2, h3, h4, h5, h6{
   .show > .btn-secondary.dropdown-toggle:focus {
     box-shadow: 0 0 0 0.2rem rgba(212, 38, 48, 0.5);
   }
-
-
-
   .btn-outline-secondary {
     color: #bd212f;
     border-color: #bd212f;
@@ -80,3 +77,8 @@ h1, h2, h3, h4, h5, h6{
   .show > .btn-outline-secondary.dropdown-toggle:focus {
     box-shadow: 0 0 0 0.2rem rgba(212, 38, 48, 0.5);
   }
+
+  
+.bg-dark {
+    background-color: #18191a !important; 
+}
