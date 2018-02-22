@@ -108,7 +108,7 @@
                 <img class="rounded" src="./assets/img/what-6.jpg" alt="Bootcamp" width="100%">
             </div>
         </div>
-        <a routerLink="" class="btn btn-secondary float-right" role="button" aria-pressed="true">See All<i class="fa fa-arrow"></i></a>
+        <a routerLink="/what" class="btn btn-secondary float-right" role="button" aria-pressed="true">See All<i class="fa fa-arrow"></i></a>
     </div>
 </section>
 
@@ -121,13 +121,13 @@
                         <img [src]="story.thumbnail" alt="stories Image" class="rounded" width="100%">
                     </div>
                     <div class="stories-text">
-                        <h6>{{ story.author }} | {{ story.dateWritten }}</h6>
-                        <h4> {{ story.title }} </h4>
+                        <a routerLink=""><h6>{{ story.author }} | {{ story.dateWritten }}</h6></a>
+                        <a routerLink=""><h4> {{ story.title }} </h4></a>
                         <p>
                            {{ story.content}}
                         </p>
-                        <a routerLink="stories/id" class="btn btn-outline-secondary float-right">Read More</a>
                     </div>
+                    <a routerLink="stories/id" class="btn btn-outline-secondary float-right">Read More</a>
                 </div>
             </div>
         </div>
