@@ -1,0 +1,25 @@
+#what{
+    img{
+        padding: 10px;
+    }
+}
+
+#stories{
+    .stories-text{
+        h4, h6{
+            padding: 0;
+            text-transform: initial;
+        }
+        h4 {
+            text-align: left;
+        }
+        a{
+            color: #000;
+        }
+        a:hover{
+            color: #000;
+            text-decoration: none;
+        }
+        
+    }
+}
