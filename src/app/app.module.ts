@@ -5,7 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-//
+//third party libs
+import { GalleryModule } from '@ngx-gallery/core';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 // Custom modules
@@ -38,12 +39,13 @@ import { LeadersComponent } from './who/leaders/leaders.component';
     LeadersComponent,
   ],
   imports: [
-    BrowserModule,
+    GalleryModule.forRoot(),
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(AppRoutes),
     AngularFontAwesomeModule,
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
