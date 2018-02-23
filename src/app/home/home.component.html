@@ -85,33 +85,32 @@
 </section>
 
 <section id="what">
-        <div class="container">
-            <h1 class="text-center">WHAT WE DO</h1>
-            <!-- Event Images -->
-            <div class="row">
-                <div class="col col-xs-6 col-sm-6 col-md-4">
-                    <img class="rounded" src="./assets/img/what-1.jpg" alt="Bootcamp" width="100%">
-                </div>
-                <div class="col col-xs-6 col-sm-6 col-md-4">
-                    <img class="rounded" src="./assets/img/what-2.jpg" alt="Bootcamp" width="100%">
-                </div>
-                <div class="col col-xs-6 col-sm-6 col-md-4">
-                    <img class="rounded" src="./assets/img/what-3.jpg" alt="Bootcamp" width="100%">
-                </div>
-                <div class="col col-xs-6 col-sm-6 col-md-4">
-                    <img class="rounded" src="./assets/img/what-4.jpg" alt="Bootcamp" width="100%">
-                </div>
-                <div class="col col-xs-6 col-sm-6 col-md-4">
-                    <img class="rounded" src="./assets/img/what-5.jpg" alt="Bootcamp" width="100%">
-                </div>
-                <div class="col col-xs-6 col-sm-6 col-md-4">
-                    <img class="rounded" src="./assets/img/what-6.jpg" alt="Bootcamp" width="100%">
-                </div>
+    <div class="container">
+        <h1 class="text-center">WHAT WE DO</h1>
+        <!-- Event Images -->
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-4">
+                <img class="rounded" src="./assets/img/what-1.jpg" alt="Bootcamp" width="100%">
             </div>
-
-            <a routerLink="" class="btn btn-primary float-right" role="button" aria-pressed="true">See All<i class="fa fa-arrow"></i></a>
+            <div class="col-xs-6 col-sm-6 col-md-4">
+                <img class="rounded" src="./assets/img/what-2.jpg" alt="Bootcamp" width="100%">
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-4">
+                <img class="rounded" src="./assets/img/what-3.jpg" alt="Bootcamp" width="100%">
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-4">
+                <img class="rounded" src="./assets/img/what-4.jpg" alt="Bootcamp" width="100%">
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-4">
+                <img class="rounded" src="./assets/img/what-5.jpg" alt="Bootcamp" width="100%">
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-4">
+                <img class="rounded" src="./assets/img/what-6.jpg" alt="Bootcamp" width="100%">
+            </div>
         </div>
-    </section>
+        <a routerLink="/what" class="btn btn-secondary float-right" role="button" aria-pressed="true">See All<i class="fa fa-arrow"></i></a>
+    </div>
+</section>
 
     <section id="stories">
         <div class="container">
@@ -122,13 +121,13 @@
                         <img [src]="story.thumbnail" alt="stories Image" class="rounded" width="100%">
                     </div>
                     <div class="stories-text">
-                        <h6>{{ story.author }} | {{ story.dateWritten }}</h6>
-                        <h4> {{ story.title }} </h4>
+                        <a routerLink=""><h6>{{ story.author }} | {{ story.dateWritten }}</h6></a>
+                        <a routerLink=""><h4> {{ story.title }} </h4></a>
                         <p>
                            {{ story.content}}
                         </p>
-                        <a routerLink="stories/id" class="btn btn-outline-secondary float-right">Read More</a>
                     </div>
+                    <a routerLink="stories/id" class="btn btn-outline-secondary float-right">Read More</a>
                 </div>
             </div>
         </div>
