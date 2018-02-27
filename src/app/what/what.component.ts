@@ -9,6 +9,8 @@ export class WhatComponent implements OnInit {
 
   constructor() { }
 
+  
+
   ngOnInit() {
   }
 
