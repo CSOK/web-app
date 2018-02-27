@@ -6,7 +6,7 @@
             <label for="firstName">First Name</label>
             <div class="input-group mb-2">
               <div class="input-group-prepend">
-                <div class="input-group-text">@</div>
+                <div class="input-group-text"><i class="fa fa-user"></i></div>
               </div>
               <input type="text" class="form-control" id="first-name" placeholder="First Name">
             </div>  
@@ -18,23 +18,47 @@
           <input type="text" class="form-control" id="last-name" placeholder="Last Name">
         </div>
       </div>
-    </div>    
+    </div>   
+
     <div class="form-group">
       <label for="email">Email</label>
-      <input type="email" class="form-control" id="email" name="email" placeholder="example@example.com">
+      <div class="input-group mb-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text"><i class="fa fa-envelope-open"></i></div>
+          </div>
+          <input type="email" class="form-control" id="email" name="email" placeholder="example@example.com">
+      </div>
       <small id="firstName" class="form-text text-muted">We'll never share your email with anyone else.</small>
     </div>
+
     <div class="form-group">
-      <label for="password">Password</label>
-      <input type="password" class="form-control" name="password" id="password" placeholder="password">
+      <label for="email">Password</label>
+      <div class="input-group mb-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text"><i class="fa fa-unlock-alt"></i></div>
+          </div>
+          <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+      </div>
     </div>
+
     <div class="form-group">
-      <label for="course">Reg-No</label>
-      <input type="text" class="form-control" name="reg" id="course" placeholder="">
+      <label for="email">Reg-No</label>
+      <div class="input-group mb-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text"><i class="fa fa-id-card"></i></div>
+          </div>
+          <input type="text" class="form-control" id="reg" name="reg" placeholder="C026-01-1200/2017">
+      </div>
     </div>
+
     <div class="form-group">
-      <label for="course">Course</label>
-      <input type="text" class="form-control" name="course" id="course" placeholder="Bsc. Computer Science">
+      <label for="email">Course</label>
+      <div class="input-group mb-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text"><i class="fa fa-graduation-cap"></i></div>
+          </div>
+          <input type="text" class="form-control" id="course" name="course" placeholder="BSc. Engineering">
+      </div>
     </div>
     <!-- <div class="form-check form-check-inline">
       <input type="radio" class="form-check-input" name="gender" id="gender-female" value="female">
