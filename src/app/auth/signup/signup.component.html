@@ -34,6 +34,13 @@
             id="last-name" 
             placeholder="Last Name">
         </div>
+        <div 
+          *ngIf="lastName.touched && lastName.invalid" 
+          class="alert alert-danger">
+            <div *ngIf="lastName.errors.required">
+                Please fill in your last name. 
+            </div>
+        </div>
       </div>
     </div>   
 
@@ -50,6 +57,12 @@
             id="email" 
             name="email" 
             placeholder="example@example.com">
+      </div>
+      <div 
+        *ngIf="email.touched && email.invalid"
+        class="alert alert-danger">
+        <div *ngIf="email.errors.required">Provide an email address.</div>
+        <div *ngIf="email.errors.required">Provide a valid email.</div>
       </div>
       <small id="firstName" class="form-text text-muted">We'll never share your email with anyone else.</small>
     </div>
@@ -68,6 +81,11 @@
             name="password" 
             placeholder="Password">
       </div>
+    </div>
+    <div 
+      *ngIf="password.touched && password.invalid"
+      class="alert alert-danger">
+      <div *ngIf="password.errors.required">Please provide a password.</div>
     </div>
 
     <button type="submit" class="btn btn-success">Join</button>
