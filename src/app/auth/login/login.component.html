@@ -35,7 +35,9 @@
                 id="password" 
                 name="password" 
                 placeholder="Password">
-        </div>
+                <!-- Password strength -->
+                </ng2-password-strength-bar>
+            </div>
         </div>
         <div 
         *ngIf="password.touched && password.invalid"
