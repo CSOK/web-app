@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 //third party libs
 import { GalleryModule } from '@ngx-gallery/core';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { PasswordStrengthBarModule } from 'ng2-password-strength-bar';
 
 // Custom modules
 import { AppRoutes } from './app.routes';
@@ -23,6 +24,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HistoryComponent } from './who/history/history.component';
 import { LeadersComponent } from './who/leaders/leaders.component';
+import { LoginComponent } from './auth/login/login.component';
+import { SignupComponent } from './auth/signup/signup.component';
 
 
 @NgModule({
@@ -37,8 +40,12 @@ import { LeadersComponent } from './who/leaders/leaders.component';
     FooterComponent,
     HistoryComponent,
     LeadersComponent,
+    LoginComponent,
+    SignupComponent,
   ],
   imports: [
+    PasswordStrengthBarModule,
+    ReactiveFormsModule,
     GalleryModule.forRoot(),
     HttpClientModule,
     FormsModule,
