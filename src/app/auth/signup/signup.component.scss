@@ -1,3 +1,22 @@
+.hero-bkg-animated {
+    background: gray url('https://scontent.fnbo1-1.fna.fbcdn.net/v/t31.0-8/13483278_630624373754224_3282533544753907817_o.jpg?oh=1c72461db41cd82bc08b4527d59f42da&oe=5B152CBA') repeat 0 0;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    padding-top: 120px;
+    box-sizing: border-box;
+    animation: slide 20s linear infinite;
+    -webkit-animation: slide 20s linear infinite;
+  }
+  
+  .hero-bkg-animated h1 {
+    font-family: sans-serif;
+  }
+  
+  @-webkit-keyframes slide {
+      from { background-position: 0 0; }
+      to { background-position: -400px 0; }
+  }
 .info{
     background-color: rgb(238, 245, 255);
     border-top-left-radius: 0.3em;
