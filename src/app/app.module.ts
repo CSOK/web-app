@@ -43,6 +43,7 @@ import { SignupComponent } from './auth/signup/signup.component';
     SignupComponent,
   ],
   imports: [
+    ReactiveFormsModule,
     GalleryModule.forRoot(),
     HttpClientModule,
     FormsModule,
