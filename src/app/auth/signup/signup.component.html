@@ -1,93 +1,115 @@
 <div class="container">
-  <form [formGroup]="form" (ngSubmit)="login">
-    <div class="row">
-      <div class="col">
-          <div class="form-group">
-            <label for="firstName">First Name</label>
-            <div class="input-group mb-2">
-              <div class="input-group-prepend">
-                <div class="input-group-text"><i class="fa fa-user"></i></div>
+  <div class="row">
+      <div class="col-xs-12 col-sm-6 social-buttons info">
+          <img src="./assets/img/csk-logo.png" alt="Logo">
+          <a class="btn btn-block btn-social btn-facebook">
+            <i class="fa fa-facebook"></i> Sign up with Facebook
+          </a>
+          <a class="btn btn-block btn-social btn-google-plus">
+            <i class="fa fa-google-plus"></i> Sign up with Google
+          </a>
+          <a class="btn btn-block btn-social btn-github">
+            <i class="fa fa-github"></i> Sign up with GitHub
+          </a>
+      </div>
+    <div class="col-xs-12 col-sm-6 my-form">
+      <form [formGroup]="form" (ngSubmit)="login">
+        <div class="row">
+          <div class="col">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <div class="input-group mb-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fa fa-user"></i></div>
+                  </div>
+                  <input
+                    formControlName="firstName" 
+                    type="text" 
+                    class="form-control" 
+                    id="first-name" 
+                    placeholder="First Name">
+                </div>  
               </div>
-              <input
-                formControlName="firstName" 
+              <div 
+                *ngIf="firstName.touched && firstName.invalid" 
+                class="alert alert-danger">
+                  <div *ngIf="firstName.errors.required">
+                      Please fill in your first name. 
+                  </div>
+              </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input 
+                formControlName="lastName"
                 type="text" 
                 class="form-control" 
-                id="first-name" 
-                placeholder="First Name">
-            </div>  
+                id="last-name" 
+                placeholder="Last Name">
+            </div>
+            <div 
+              *ngIf="lastName.touched && lastName.invalid" 
+              class="alert alert-danger">
+                <div *ngIf="lastName.errors.required">
+                    Please fill in your last name. 
+                </div>
+            </div>
+          </div>
+        </div>   
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fa fa-envelope-open"></i></div>
+              </div>
+              <input 
+                formControlName="email"
+                type="email" 
+                class="form-control" 
+                id="email" 
+                name="email" 
+                placeholder="example@example.com">
           </div>
           <div 
-            *ngIf="firstName.touched && firstName.invalid" 
+            *ngIf="email.touched && email.invalid"
             class="alert alert-danger">
-              <div *ngIf="firstName.errors.required">
-                  Please fill in your first name. 
-              </div>
+            <div *ngIf="email.errors.required">Provide an email address.</div>
+            <div *ngIf="email.errors.required">Provide a valid email.</div>
           </div>
-      </div>
-      <div class="col">
+          <small id="firstName" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+
         <div class="form-group">
-          <label for="lastName">Last Name</label>
-          <input 
-            formControlName="lastName"
-            type="text" 
-            class="form-control" 
-            id="last-name" 
-            placeholder="Last Name">
+          <label for="email">Password</label>
+          <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fa fa-unlock-alt"></i></div>
+              </div>
+              <input 
+                formControlName="password"
+                type="password" 
+                class="form-control" 
+                id="password" 
+                name="password" 
+                placeholder="Password">
+          </div>
         </div>
         <div 
-          *ngIf="lastName.touched && lastName.invalid" 
+          *ngIf="password.touched && password.invalid"
           class="alert alert-danger">
-            <div *ngIf="lastName.errors.required">
-                Please fill in your last name. 
-            </div>
+          <div *ngIf="password.errors.required">Please provide a password.</div>
         </div>
-      </div>
-    </div>   
 
-    <div class="form-group">
-      <label for="email">Email</label>
-      <div class="input-group mb-2">
-          <div class="input-group-prepend">
-            <div class="input-group-text"><i class="fa fa-envelope-open"></i></div>
-          </div>
-          <input 
-            formControlName="email"
-            type="email" 
-            class="form-control" 
-            id="email" 
-            name="email" 
-            placeholder="example@example.com">
-      </div>
-      <div 
-        *ngIf="email.touched && email.invalid"
-        class="alert alert-danger">
-        <div *ngIf="email.errors.required">Provide an email address.</div>
-        <div *ngIf="email.errors.required">Provide a valid email.</div>
-      </div>
-      <small id="firstName" class="form-text text-muted">We'll never share your email with anyone else.</small>
-    </div>
+        <div class="custom-control custom-checkbox my-1 mr-sm-2">
+          <input type="checkbox" class="custom-control-input" id="customControlInline">
+          <label class="custom-control-label" for="customControlInline">Receive email updates</label>
+        </div>
 
-    <div class="form-group">
-      <label for="email">Password</label>
-      <div class="input-group mb-2">
-          <div class="input-group-prepend">
-            <div class="input-group-text"><i class="fa fa-unlock-alt"></i></div>
-          </div>
-          <input 
-            formControlName="password"
-            type="password" 
-            class="form-control" 
-            id="password" 
-            name="password" 
-            placeholder="Password">
-      </div>
-    </div>
-    <div 
-      *ngIf="password.touched && password.invalid"
-      class="alert alert-danger">
-      <div *ngIf="password.errors.required">Please provide a password.</div>
-    </div>
-
-    <button type="submit" class="btn btn-success">Join</button>
-  </form>
+        <button type="submit" class="btn btn-success">Sign Up</button>
+      </form>
+    </div>  
+      <!-- //End col -->
+  </div><!-- End row -->
 </div>
