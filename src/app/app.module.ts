@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 //third party libs
 import { GalleryModule } from '@ngx-gallery/core';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { PasswordStrengthBarModule } from 'ng2-password-strength-bar';
 
 // Custom modules
 import { AppRoutes } from './app.routes';
@@ -43,6 +44,7 @@ import { SignupComponent } from './auth/signup/signup.component';
     SignupComponent,
   ],
   imports: [
+    PasswordStrengthBarModule,
     ReactiveFormsModule,
     GalleryModule.forRoot(),
     HttpClientModule,
