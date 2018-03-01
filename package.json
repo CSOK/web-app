@@ -13,6 +13,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^5.2.0",
+    "@angular/cdk": "^5.2.3",
     "@angular/common": "^5.2.0",
     "@angular/compiler": "^5.2.0",
     "@angular/core": "^5.2.0",
@@ -21,7 +22,9 @@
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
-    "@ngx-gallery/core": "^2.0.0-beta.2",
+    "@ngx-gallery/core": "^2.0.0-beta.4",
+    "@ngx-gallery/gallerize": "^2.0.0-beta.4",
+    "@ngx-gallery/lightbox": "^2.0.0-beta.4",
     "angular-font-awesome": "^3.1.2",
     "bootstrap": "^4.0.0",
     "contentful": "^5.1.3",
