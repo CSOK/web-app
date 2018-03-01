@@ -1,10 +1,22 @@
 <div class="hero-bkg-animated">
   <div class="container">
+    <div class="text-right">
+      <small>Already have an account? <a routerLink="/login">Log in</a></small>
+    </div>
     <div class="row">
         <div class="col-xs-12 col-sm-6 info">
-            <img src="./assets/img/csk-logo.png" alt="Logo">
+          <h2>Sign up for CSK</h2>
+          <p>Use your Github or Google account to easily get started, or fill out the form</p>
         </div>
       <div class="col-xs-12 col-sm-6 my-form">
+        <div class="row">
+          <a href="" class="col btn btn-outline-primary btn-github ">
+            <i class="fa fa-github"></i>
+          </a>
+          <a href="" class="col btn btn-outline-primary btn-google">
+            <i class="fa fa-google"></i>
+          </a>
+        </div>
         <form [formGroup]="form" (ngSubmit)="login">
           <div class="row">
             <div class="col">
@@ -99,7 +111,7 @@
             <label class="custom-control-label" for="customControlInline">Receive email updates</label>
           </div>
 
-          <button type="submit" class="btn btn-success">Sign Up</button>
+          <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
         </form>
       </div>  
         <!-- //End col -->

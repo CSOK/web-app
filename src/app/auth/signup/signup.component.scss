@@ -18,15 +18,57 @@
       to { background-position: -400px 0; }
   }
    */
+
+// Signup with buttons
+.btn-github{
+    color: #767676;
+    border-color: #767676;
+    margin-right: 10px;
+}
+.btn-github:hover{
+    color: #333;
+    background-color: transparent;
+    border-color: #333;
+}
+.btn-outline-primary.btn-github:not(:disabled):not(.disabled):active, .btn-outline-primary.btn-github:not(:disabled):not(.disabled).active, .show > .btn-outline-primary.btn-github.dropdown-toggle {
+    background-color: transparent;
+    border-color: #333;
+    color: #333;
+}
+// All outline buttons
+.btn-outline-primary:focus, .btn-outline-primary.focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-primary.dropdown-toggle:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.btn-google{
+    color: #ea4335;
+    border-color: #ea4335;
+    margin-left: 10px;
+}
+.btn-google:hover{
+    color: #DB4437;
+    background-color: transparent;
+    border-color: #DB4437;
+}
+.btn-outline-primary.btn-google:not(:disabled):not(.disabled):active, .btn-outline-primary.btn-google:not(:disabled):not(.disabled).active, .show > .btn-outline-primary.btn-google.dropdown-toggle {
+    background-color: transparent;
+    border-color: #DB4437;
+    color: #DB4437;
+}
+
+
+
 .info{
-    // background-color: #fff;
-    //background-color: transparent;
     border-top-left-radius: 0.3em;
     border-bottom-left-radius: 0.3em;
 }
 
 .my-form{
-   // background-color: #2e2e2e;
     border-top-right-radius: 0.3em;
     border-bottom-right-radius: 0.3em;
 }
