@@ -1,4 +1,4 @@
-.hero-bkg-animated {
+/* .hero-bkg-animated {
     background: gray url('https://scontent.fnbo1-1.fna.fbcdn.net/v/t31.0-8/13483278_630624373754224_3282533544753907817_o.jpg?oh=1c72461db41cd82bc08b4527d59f42da&oe=5B152CBA') repeat 0 0;
     width: 100%;
     margin: 0;
@@ -17,20 +17,16 @@
       from { background-position: 0 0; }
       to { background-position: -400px 0; }
   }
+   */
 .info{
     // background-color: #fff;
-    background-color: transparent;
+    //background-color: transparent;
     border-top-left-radius: 0.3em;
     border-bottom-left-radius: 0.3em;
 }
 
 .my-form{
-    background-color: #2e2e2e;
+   // background-color: #2e2e2e;
     border-top-right-radius: 0.3em;
     border-bottom-right-radius: 0.3em;
-}
-.social-buttons{
-    a{
-        color: #fff;
-    }
 }
