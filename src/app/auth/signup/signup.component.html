@@ -1,120 +1,99 @@
-<div class="hero-bkg-animated">
-  <div class="container">
-    <div class="text-right">
-      <small>Already have an account? <a routerLink="/login">Log in</a></small>
-    </div>
-    <div class="row">
-        <div class="col-xs-12 col-sm-6 info">
-          <h2>Sign up for CSK</h2>
-          <p>Use your Github or Google account to easily get started, or fill out the form</p>
-        </div>
+<div class="container">
+  <div class="text-right">
+    <small>Already have an account? <a routerLink="/login">Log in</a></small>
+  </div>
+  <div class="row content">
+      <div class="col-xs-12 col-sm-6 info">
+        <h2>Sign up for CSK</h2>
+        <p>Use your Github or Google account to easily get started, or fill out the form</p>
+      </div>
       <div class="col-xs-12 col-sm-6 my-form">
-        <div class="row">
-          <a href="" class="col btn btn-outline-primary btn-github ">
-            <i class="fa fa-github"></i>
-          </a>
-          <a href="" class="col btn btn-outline-primary btn-google">
-            <i class="fa fa-google"></i>
-          </a>
-        </div>
-        <form [formGroup]="form" (ngSubmit)="login">
+        <hr class="hr-text" data-content="Sign Up with">
           <div class="row">
-            <div class="col">
-                <div class="form-group">
-                  <label for="firstName" class="sr-only">First Name</label>
-                  <div class="input-group mb-2">
-                    <div class="input-group-prepend">
-                      <div class="input-group-text"><i class="fa fa-user"></i></div>
-                    </div>
-                    <input
-                      formControlName="firstName" 
-                      type="text" 
-                      class="form-control" 
-                      id="first-name" 
-                      placeholder="First Name">
-                  </div>  
-                </div>
-                <div 
-                  *ngIf="firstName.touched && firstName.invalid" 
-                  class="alert alert-danger">
-                    <div *ngIf="firstName.errors.required">
-                        Please fill in your first name. 
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-              <div class="form-group">
-                <label for="lastName" class="sr-only">Last Name</label>
-                <input 
-                  formControlName="lastName"
-                  type="text" 
-                  class="form-control" 
-                  id="last-name" 
-                  placeholder="Last Name">
-              </div>
-              <div 
-                *ngIf="lastName.touched && lastName.invalid" 
-                class="alert alert-danger">
-                  <div *ngIf="lastName.errors.required">
-                      Please fill in your last name. 
-                  </div>
-              </div>
-            </div>
-          </div>   
-
-          <div class="form-group">
-            <label for="email" class="sr-only">Email</label>
-            <div class="input-group mb-2">
-                <div class="input-group-prepend">
-                  <div class="input-group-text"><i class="fa fa-envelope-open"></i></div>
-                </div>
-                <input 
-                  formControlName="email"
-                  type="email" 
-                  class="form-control" 
-                  id="email" 
-                  name="email" 
-                  placeholder="example@example.com">
-            </div>
-            <div 
-              *ngIf="email.touched && email.invalid"
-              class="alert alert-danger">
-              <div *ngIf="email.errors.required">Provide an email address.</div>
-              <div *ngIf="email.errors.required">Provide a valid email.</div>
-            </div>
+            <a href="" class="col btn btn-outline-primary btn-github ">
+              <i class="fa fa-github"></i>
+            </a>
+            <a href="" class="col btn btn-outline-primary btn-google">
+              <i class="fa fa-google"></i>
+            </a>
           </div>
-
+        <hr class="hr-text" data-content="or">
+      <form [formGroup]="form" (ngSubmit)="login">
           <div class="form-group">
-            <label for="email" class="sr-only">Password</label>
-            <div class="input-group mb-2">
-                <div class="input-group-prepend">
-                  <div class="input-group-text"><i class="fa fa-unlock-alt"></i></div>
-                </div>
-                <input 
-                  formControlName="password"
-                  type="password" 
-                  class="form-control" 
-                  id="password" 
-                  name="password" 
-                  placeholder="Password">
-            </div>
+            <label for="firstName" class="sr-only">First Name</label>
+            <input
+              formControlName="firstName" 
+              type="text" 
+              class="form-control" 
+              id="first-name" 
+              placeholder="First Name"> 
           </div>
           <div 
-            *ngIf="password.touched && password.invalid"
+            *ngIf="firstName.touched && firstName.invalid" 
             class="alert alert-danger">
-            <div *ngIf="password.errors.required">Please provide a password.</div>
+              <div *ngIf="firstName.errors.required">
+                  Please fill in your first name. 
+              </div>
           </div>
+        <div class="form-group">
+          <label for="lastName" class="sr-only">Last Name</label>
+          <input 
+            formControlName="lastName"
+            type="text" 
+            class="form-control" 
+            id="last-name" 
+            placeholder="Last Name">
+        </div>
+        <div 
+          *ngIf="lastName.touched && lastName.invalid" 
+          class="alert alert-danger">
+            <div *ngIf="lastName.errors.required">
+                Please fill in your last name. 
+            </div>
+        </div>
 
-          <div class="custom-control custom-checkbox my-1 mr-sm-2">
-            <input type="checkbox" class="custom-control-input" id="customControlInline">
-            <label class="custom-control-label" for="customControlInline">Receive email updates</label>
+        <div class="form-group">
+          <label for="email" class="sr-only">Email</label>
+          <input 
+            formControlName="email"
+            type="email" 
+            class="form-control" 
+            id="email" 
+            name="email" 
+            placeholder="example@example.com">
+
+          <div 
+            *ngIf="email.touched && email.invalid"
+            class="alert alert-danger">
+            <div *ngIf="email.errors.required">Provide an email address.</div>
+            <div *ngIf="email.errors.required">Provide a valid email.</div>
           </div>
+        </div>
 
-          <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
-        </form>
-      </div>  
-        <!-- //End col -->
-    </div><!-- End row -->
+        <div class="form-group">
+          <label for="email" class="sr-only">Password</label>
+          <input 
+            formControlName="password"
+            type="password" 
+            class="form-control" 
+            id="password" 
+            name="password" 
+            placeholder="Password">
+        </div>
+        <div 
+          *ngIf="password.touched && password.invalid"
+          class="alert alert-danger">
+          <div *ngIf="password.errors.required">Please provide a password.</div>
+        </div>
 
-  </div>
+        <div class="custom-control custom-checkbox my-1 mr-sm-2">
+          <input type="checkbox" class="custom-control-input" id="customControlInline">
+          <label class="custom-control-label" for="customControlInline">Receive email updates</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+      </form>
+    </div>  
+      <!-- //End col -->
+  </div><!-- End row -->
 </div>

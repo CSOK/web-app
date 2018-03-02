@@ -22,9 +22,10 @@ h1{
     text-decoration: none;
     outline: none;
   }
-input{
+
+/* input{
   border: 0px solid;
-}
+} 
 
 input:focus{
   background-color: transparent !important;
@@ -51,9 +52,10 @@ input[type='password']:focus{
   border-left: 0;
   border-radius: 0;
 }
+*/
+
 .input-group-text{
   background-color: transparent;
-  border: 0;
 }
 
 /* Buttons */

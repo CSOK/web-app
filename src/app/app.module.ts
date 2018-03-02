@@ -12,6 +12,7 @@ import { GalleryModule } from  '@ngx-gallery/core';
 import { LightboxModule } from  '@ngx-gallery/lightbox';
 import { GallerizeModule } from  '@ngx-gallery/gallerize';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { Ng2PageScrollModule } from 'ng2-page-scroll';
 
 // Custom modules
 import { AppRoutes } from './app.routes';
@@ -48,6 +49,7 @@ import { ContentfulService } from './services/contentful.service';
     SignupComponent,
   ],
   imports: [
+    Ng2PageScrollModule.forRoot(),
     ReactiveFormsModule,   
     BrowserAnimationsModule,
     GalleryModule.forRoot(),
