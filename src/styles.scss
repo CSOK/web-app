@@ -64,6 +64,10 @@ input[type='password']:focus{
 .input-group-text{
   background-color: transparent;
 }
+.form-control:focus{
+  box-shadow: none;
+  border-color: #ced4da;
+}
 
 
 /* Alert */
