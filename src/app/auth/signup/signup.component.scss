@@ -19,13 +19,25 @@
   }
    */
 
+.info{
+    padding: 0 3em;
+    border-top-left-radius: 0.3em;
+    border-bottom-left-radius: 0.3em;
+}
+
+.my-form{
+    padding: 0 3em;
+    border-top-right-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+}
 .content{
     padding-top: 3em;
 }
 
 .my-form{
     .row{
-        padding: 0 2em;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
@@ -42,7 +54,6 @@
     opacity: .5;
     &:before {
         content: '';
-        // use the linear-gradient for the fading effect
         // use a solid background color for a solid bar
         background: #818078;
         position: absolute;
@@ -108,13 +119,3 @@
 }
 
 
-
-.info{
-    border-top-left-radius: 0.3em;
-    border-bottom-left-radius: 0.3em;
-}
-
-.my-form{
-    border-top-right-radius: 0.3em;
-    border-bottom-right-radius: 0.3em;
-}
