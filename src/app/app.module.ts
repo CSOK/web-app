@@ -5,10 +5,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-//third party libs
-import { GalleryModule } from '@ngx-gallery/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+//Third party libs
+import { GalleryModule } from  '@ngx-gallery/core';
+import { LightboxModule } from  '@ngx-gallery/lightbox';
+import { GallerizeModule } from  '@ngx-gallery/gallerize';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import { PasswordStrengthBarModule } from 'ng2-password-strength-bar';
+import { Ng2PageScrollModule } from 'ng2-page-scroll';
 
 // Custom modules
 import { AppRoutes } from './app.routes';
@@ -26,6 +30,7 @@ import { HistoryComponent } from './who/history/history.component';
 import { LeadersComponent } from './who/leaders/leaders.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
+import { ContentfulService } from './services/contentful.service';
 
 
 @NgModule({
@@ -44,9 +49,11 @@ import { SignupComponent } from './auth/signup/signup.component';
     SignupComponent,
   ],
   imports: [
-    PasswordStrengthBarModule,
-    ReactiveFormsModule,
+    Ng2PageScrollModule.forRoot(),
+    ReactiveFormsModule,   
+    BrowserAnimationsModule,
     GalleryModule.forRoot(),
+    GallerizeModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
@@ -54,7 +61,7 @@ import { SignupComponent } from './auth/signup/signup.component';
     AngularFontAwesomeModule,
     BrowserModule
   ],
-  providers: [],
+  providers: [ContentfulService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

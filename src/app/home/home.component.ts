@@ -1,3 +1,4 @@
+import { Ng2PageScrollModule } from 'ng2-page-scroll';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

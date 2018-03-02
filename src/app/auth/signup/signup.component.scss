@@ -1,4 +1,4 @@
-.hero-bkg-animated {
+/* .hero-bkg-animated {
     background: gray url('https://scontent.fnbo1-1.fna.fbcdn.net/v/t31.0-8/13483278_630624373754224_3282533544753907817_o.jpg?oh=1c72461db41cd82bc08b4527d59f42da&oe=5B152CBA') repeat 0 0;
     width: 100%;
     margin: 0;
@@ -17,19 +17,105 @@
       from { background-position: 0 0; }
       to { background-position: -400px 0; }
   }
+   */
+
 .info{
-    background-color: rgb(238, 245, 255);
+    padding: 0 3em;
     border-top-left-radius: 0.3em;
     border-bottom-left-radius: 0.3em;
 }
 
 .my-form{
-    background-color: #2e2e2e;
+    padding: 0 3em;
     border-top-right-radius: 0.3em;
     border-bottom-right-radius: 0.3em;
 }
-.social-buttons{
-    a{
-        color: #fff;
+.content{
+    padding-top: 3em;
+}
+
+.my-form{
+    .row{
+        margin-left: 0;
+        margin-right: 0;
     }
 }
+
+// Buttons header
+
+.hr-text {
+    line-height: 1em;
+    position: relative;
+    outline: 0;
+    border: 0;
+    color: black;
+    text-align: center;
+    height: 1.5em;
+    opacity: .5;
+    &:before {
+        content: '';
+        // use a solid background color for a solid bar
+        background: #818078;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 1px;
+    }
+    &:after {
+        content: attr(data-content);
+        position: relative;
+        display: inline-block;
+        color: black;
+
+        padding: 0 .5em;
+        line-height: 1.5em;
+        // this is really the only tricky part, you need to specify the background color of the container element...
+        color: #818078;
+        background-color: #fcfcfa;
+    }
+}
+
+// Signup with buttons
+.btn-github{
+    color: #767676;
+    border-color: #767676;
+    margin-right: 10px;
+}
+.btn-github:hover{
+    color: #333;
+    background-color: transparent;
+    border-color: #333;
+}
+.btn-outline-primary.btn-github:not(:disabled):not(.disabled):active, .btn-outline-primary.btn-github:not(:disabled):not(.disabled).active, .show > .btn-outline-primary.btn-github.dropdown-toggle {
+    background-color: transparent;
+    border-color: #333;
+    color: #333;
+}
+// All outline buttons
+.btn-outline-primary:focus, .btn-outline-primary.focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-primary.dropdown-toggle:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.btn-google{
+    color: #ea4335;
+    border-color: #ea4335;
+    margin-left: 10px;
+}
+.btn-google:hover{
+    color: #DB4437;
+    background-color: transparent;
+    border-color: #DB4437;
+}
+.btn-outline-primary.btn-google:not(:disabled):not(.disabled):active, .btn-outline-primary.btn-google:not(:disabled):not(.disabled).active, .show > .btn-outline-primary.btn-google.dropdown-toggle {
+    background-color: transparent;
+    border-color: #DB4437;
+    color: #DB4437;
+}
+
+
