@@ -1,18 +1,24 @@
 <section>
+  <div class="jumbotron jumbotron-fluid my-jumbotron">
+    <div class="container text-center">
+      <h2 class="display-3">What We Do</h2>
+      <p class="lead">Computer Society of Kimathi</p>
+    </div>
+  </div>
+</section>
+<section>
   <div class="container">
     <div class="row">
-      <div class="event-group col">
-        <img src="assets/img/what-3.jpg" alt="GDG DevFest" class="img-responsive">
-        <h4>GDG DevFest Nyeri</h4>
+      <div 
+        *ngFor="let event of events"
+        class="event-group col-xs-6 col-sm-6 col-md-4">
+        <img [src]="event.thumbnail" alt="" class="img-responsive rounded">
+        <h4>{{ event.title }}</h4>
         <p>
-          GDG DEVFEST NYERI was another great success from GDG Kimathi University. It was a three-day event held from 11th November 2016 ...
+          {{ event.description }}
         </p>
-        <a routerLink="what/id" class="btn btn-outline-secondary">Read More</a>
+        <a routerLink="what/{{ event.url }}" class="btn btn-outline-secondary">Read More</a>
       </div>
-      <div class="event-group"></div>
-      <div class="event-group"></div>
-      <div class="event-group"></div>
-      <div class="event-group"></div>       
     </div>
   </div>
 </section>
