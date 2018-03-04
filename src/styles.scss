@@ -17,7 +17,6 @@
 
 body{
     font-family: 'Open Sans', sans-serif;
-    padding-top: 100px;
 }
 h1{
     text-transform: uppercase;
@@ -25,41 +24,11 @@ h1{
     padding: 20px 0;
 }
 
-  a:hover {
-    text-decoration: none;
-    outline: none;
-  }
-
-/* input{
-  border: 0px solid;
-} 
-
-input:focus{
-  background-color: transparent !important;
-  outline: 0 !important; 
-  box-shadow: transparent !important; 
-}
-
-input[type='text'],
-input[type='email'],
-input[type='password']{
-  background-color: transparent;
-  outline: transparent;
-}
-input[type='text']:focus,
-input[type='email']:focus,
-input[type='password']:focus{
+a:hover {
+  text-decoration: none;
   outline: none;
-  box-shadow: none !important;
-  // border: 0 !important;
 }
-.form-control{
-  border-top: 0;
-  border-right: 0;
-  border-left: 0;
-  border-radius: 0;
-}
-*/
+
 
 .input-group-text{
   background-color: transparent;
@@ -68,6 +37,17 @@ input[type='password']:focus{
   box-shadow: none;
   border-color: #ced4da;
 }
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-size: 0.9em;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-size: 0.9em;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  font-size: 0.9em;
+}
 
 
 /* Alert */
@@ -75,6 +55,7 @@ input[type='password']:focus{
   padding: 0;
 }
 .alert-danger {
+  font-size: 0.8em;
   color: #D8000C;
   background-color: transparent;
   border-color: transparent;
