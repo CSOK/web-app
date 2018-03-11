@@ -16,7 +16,6 @@ export class PostsComponent implements OnInit {
   ngOnInit() {
     this.contentful.getPosts().subscribe(content => {
       this.posts = content.items;
-      console.log(this.posts);
     });
   }
 

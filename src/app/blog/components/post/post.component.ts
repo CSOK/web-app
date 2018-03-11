@@ -23,7 +23,6 @@ export class PostComponent implements OnInit {
     if (this.params.hasOwnProperty('id')) {
       this.contentful.getPost(this.params.id).subscribe(content => {
         this.post = content;
-        console.log(content);
       });
     }
 
