@@ -7,10 +7,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-//Third party libs
-import { GalleryModule } from  '@ngx-gallery/core';
-import { LightboxModule } from  '@ngx-gallery/lightbox';
-import { GallerizeModule } from  '@ngx-gallery/gallerize';
+// Third party libs
+import { GalleryModule } from '@ngx-gallery/core';
+import { LightboxModule } from '@ngx-gallery/lightbox';
+import { GallerizeModule } from '@ngx-gallery/gallerize';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
 
@@ -30,7 +30,10 @@ import { HistoryComponent } from './who/history/history.component';
 import { LeadersComponent } from './who/leaders/leaders.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
-import { ContentfulService } from './services/contentful.service';
+import { ContentfulService } from './blog/services/contentful.service';
+import { PostsComponent } from './blog/components/posts/posts.component';
+import { PostComponent } from './blog/components/post/post.component';
+import { MdToHtmlPipe } from './utils/markdown-to-html/md-to-html.pipe';
 
 
 @NgModule({
@@ -47,10 +50,13 @@ import { ContentfulService } from './services/contentful.service';
     LeadersComponent,
     LoginComponent,
     SignupComponent,
+    PostsComponent,
+    PostComponent,
+    MdToHtmlPipe,
   ],
   imports: [
     Ng2PageScrollModule.forRoot(),
-    ReactiveFormsModule,   
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     GalleryModule.forRoot(),
     GallerizeModule,
