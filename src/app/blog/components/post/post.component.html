@@ -1,0 +1,5 @@
+<div *ngIf="post">
+  <h1>{{ post.fields.title }}</h1>
+  <p [innerHTML]="post.fields.body | mdToHtml"></p>
+  <time>{{ post.sys.createdAt | date: 'fullDate' }}</time>
+</div>
